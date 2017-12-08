@@ -13,15 +13,15 @@ export interface Test {
 export class Service {
   constructor(private ngClient: NgClient) {}
 
-  getHi(): Promise<string> {
+  GetHi(): Promise<string> {
     return this.ngClient.call<string>("dobika", "myservice", "GET", "/hi", {  });
   }
 
-  getImportedHi(): Promise<string> {
+  GetImportedHi(): Promise<string> {
     return this.ngClient.call<string>("dobika", "myservice", "GET", "/imported-hi", {  });
   }
 
-  getSqlExample(): Promise<string> {
+  GetSqlExample(): Promise<string> {
     return this.ngClient.call<string>("dobika", "myservice", "GET", "/sql-example", {  });
   }
 
